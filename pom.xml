@@ -63,12 +63,19 @@
   <dependencies>
 
      <!-- 3rd party _packaged_ dependencies, alpha by groupId/artifactId -->
+     <!--
     <dependency>
       <groupId>com.google.android</groupId>
       <artifactId>support-v4</artifactId>
       <version>${android-support-v4.version}</version>
     </dependency>
-
+-->
+ <dependency>
+      <groupId>android.support</groupId>
+      <artifactId>compatibility-v4</artifactId>
+      <version>20.0.0</version>
+    </dependency>
+    
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
@@ -88,10 +95,25 @@
     </dependency>
 
     <!-- 3rd party _provided_ dependencies, alpha by groupId/artifactId -->
+    <!--
     <dependency>
       <groupId>com.google.android</groupId>
       <artifactId>android</artifactId>
       <version>${android.version}</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    -->
+    
+     <dependency>
+      <groupId>android</groupId>
+      <artifactId>android</artifactId>
+      <version>4.2.2_r2</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
